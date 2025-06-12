@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.buttonDashboard = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
@@ -51,27 +51,27 @@
             // buttonDashboard
             // 
             this.buttonDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonDashboard.Location = new System.Drawing.Point(217, 469);
+            this.buttonDashboard.Location = new System.Drawing.Point(47, 454);
             this.buttonDashboard.Name = "buttonDashboard";
-            this.buttonDashboard.Size = new System.Drawing.Size(252, 36);
+            this.buttonDashboard.Size = new System.Drawing.Size(575, 36);
             this.buttonDashboard.TabIndex = 34;
             this.buttonDashboard.Text = "Back To Dashboard";
             this.buttonDashboard.UseVisualStyleBackColor = true;
             // 
-            // buttonUpdate
+            // buttonEdit
             // 
-            this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonUpdate.Location = new System.Drawing.Point(495, 389);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(127, 36);
-            this.buttonUpdate.TabIndex = 33;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.buttonEdit.Location = new System.Drawing.Point(495, 253);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(127, 36);
+            this.buttonEdit.TabIndex = 33;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = true;
             // 
             // buttonClear
             // 
             this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonClear.Location = new System.Drawing.Point(495, 305);
+            this.buttonClear.Location = new System.Drawing.Point(495, 381);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(127, 36);
             this.buttonClear.TabIndex = 32;
@@ -81,7 +81,7 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonDelete.Location = new System.Drawing.Point(495, 263);
+            this.buttonDelete.Location = new System.Drawing.Point(495, 297);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(127, 36);
             this.buttonDelete.TabIndex = 31;
@@ -128,7 +128,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonAdd.Location = new System.Drawing.Point(495, 347);
+            this.buttonAdd.Location = new System.Drawing.Point(495, 339);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(127, 36);
             this.buttonAdd.TabIndex = 25;
@@ -209,9 +209,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 548);
+            this.ClientSize = new System.Drawing.Size(663, 524);
             this.Controls.Add(this.buttonDashboard);
-            this.Controls.Add(this.buttonUpdate);
+            this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.comboBoxSupplier);
@@ -238,7 +238,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonDashboard;
-        private System.Windows.Forms.Button buttonUpdate;
+        private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.ComboBox comboBoxSupplier;
