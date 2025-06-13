@@ -30,7 +30,6 @@
         {
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
             this.textBoxStock = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.Name = new System.Windows.Forms.Label();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.labelManageProducts = new System.Windows.Forms.Label();
+            this.buttonView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,17 +68,6 @@
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
-            // 
-            // buttonClear
-            // 
-            this.buttonClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonClear.Location = new System.Drawing.Point(495, 381);
-            this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(127, 36);
-            this.buttonClear.TabIndex = 32;
-            this.buttonClear.Text = "View";
-            this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonDelete
             // 
@@ -209,14 +198,25 @@
             this.labelManageProducts.TabIndex = 18;
             this.labelManageProducts.Text = "Manage Products";
             // 
+            // buttonView
+            // 
+            this.buttonView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.buttonView.Location = new System.Drawing.Point(495, 381);
+            this.buttonView.Name = "buttonView";
+            this.buttonView.Size = new System.Drawing.Size(127, 39);
+            this.buttonView.TabIndex = 35;
+            this.buttonView.Text = "View";
+            this.buttonView.UseVisualStyleBackColor = true;
+            this.buttonView.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 524);
+            this.Controls.Add(this.buttonView);
             this.Controls.Add(this.buttonDashboard);
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.comboBoxSupplier);
             this.Controls.Add(this.textBoxStock);
@@ -233,6 +233,7 @@
             this.Controls.Add(this.labelManageProducts);
             this.Name = "ManageProducts";
             this.Text = "ManageProducts";
+            this.Load += new System.EventHandler(this.ManageProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -243,7 +244,6 @@
 
         private System.Windows.Forms.Button buttonDashboard;
         private System.Windows.Forms.Button buttonEdit;
-        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.TextBox textBoxStock;
@@ -258,5 +258,6 @@
         private System.Windows.Forms.Label Name;
         private System.Windows.Forms.DataGridView dataGridViewProducts;
         private System.Windows.Forms.Label labelManageProducts;
+        private System.Windows.Forms.Button buttonView;
     }
 }

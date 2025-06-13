@@ -55,11 +55,6 @@ namespace Inventory_Managment_System.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
             string sku = txtSKU.Text;
             Product product = products.FirstOrDefault(p => p.SKU == sku);
 
@@ -72,6 +67,21 @@ namespace Inventory_Managment_System.Forms
             {
                 MessageBox.Show("Product not found.");
             }
+        }
+
+        private void buttonView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ManageProducts_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
