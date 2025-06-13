@@ -34,15 +34,14 @@
             this.buttonLogin = new System.Windows.Forms.Button();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.labelRole = new System.Windows.Forms.Label();
-            this.comboBoxRole = new System.Windows.Forms.ComboBox();
+            this.buttonRegistration = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(61, 56);
+            this.label1.Location = new System.Drawing.Point(61, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(260, 29);
             this.label1.TabIndex = 0;
@@ -52,7 +51,7 @@
             // 
             this.labelUsername.AutoSize = true;
             this.labelUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUsername.Location = new System.Drawing.Point(62, 134);
+            this.labelUsername.Location = new System.Drawing.Point(62, 128);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(96, 20);
             this.labelUsername.TabIndex = 1;
@@ -62,7 +61,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(61, 189);
+            this.labelPassword.Location = new System.Drawing.Point(61, 183);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(93, 20);
             this.labelPassword.TabIndex = 2;
@@ -71,7 +70,7 @@
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonLogin.Location = new System.Drawing.Point(140, 321);
+            this.buttonLogin.Location = new System.Drawing.Point(157, 239);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(85, 36);
             this.buttonLogin.TabIndex = 3;
@@ -80,43 +79,34 @@
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(183, 132);
+            this.textBoxUsername.Location = new System.Drawing.Point(183, 126);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(150, 22);
             this.textBoxUsername.TabIndex = 5;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(183, 187);
+            this.textBoxPassword.Location = new System.Drawing.Point(183, 181);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(150, 22);
             this.textBoxPassword.TabIndex = 6;
             // 
-            // labelRole
+            // buttonRegistration
             // 
-            this.labelRole.AutoSize = true;
-            this.labelRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRole.Location = new System.Drawing.Point(65, 240);
-            this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(53, 20);
-            this.labelRole.TabIndex = 9;
-            this.labelRole.Text = "Role :";
-            // 
-            // comboBoxRole
-            // 
-            this.comboBoxRole.FormattingEnabled = true;
-            this.comboBoxRole.Location = new System.Drawing.Point(183, 240);
-            this.comboBoxRole.Name = "comboBoxRole";
-            this.comboBoxRole.Size = new System.Drawing.Size(150, 24);
-            this.comboBoxRole.TabIndex = 10;
+            this.buttonRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.buttonRegistration.Location = new System.Drawing.Point(65, 294);
+            this.buttonRegistration.Name = "buttonRegistration";
+            this.buttonRegistration.Size = new System.Drawing.Size(268, 36);
+            this.buttonRegistration.TabIndex = 11;
+            this.buttonRegistration.Text = "Register";
+            this.buttonRegistration.UseVisualStyleBackColor = true;
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 390);
-            this.Controls.Add(this.comboBoxRole);
-            this.Controls.Add(this.labelRole);
+            this.ClientSize = new System.Drawing.Size(383, 362);
+            this.Controls.Add(this.buttonRegistration);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.buttonLogin);
@@ -138,7 +128,6 @@
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Label labelRole;
-        private System.Windows.Forms.ComboBox comboBoxRole;
+        private System.Windows.Forms.Button buttonRegistration;
     }
 }

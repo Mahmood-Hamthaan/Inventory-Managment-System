@@ -96,7 +96,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelAdminDashboard);
             this.Name = "AdminDashboard";
-            this.Text = "Admin Dashboard";
+            this.Text = " Admin Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 
