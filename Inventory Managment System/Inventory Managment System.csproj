@@ -99,51 +99,54 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DBconnection.cs" />
-    <Compile Include="Forms\AdminDashboard.cs">
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="SystemUi\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AdminDashboard.Designer.cs">
+    <Compile Include="SystemUi\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LogIn.cs">
+    <Compile Include="SystemUi\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LogIn.Designer.cs">
+    <Compile Include="SystemUi\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManageProducts.cs">
+    <Compile Include="SystemUi\ManageProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManageProducts.Designer.cs">
+    <Compile Include="SystemUi\ManageProducts.Designer.cs">
       <DependentUpon>ManageProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManageSuppliers.cs">
+    <Compile Include="SystemUi\ManageSuppliers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManageSuppliers.Designer.cs">
+    <Compile Include="SystemUi\ManageSuppliers.Designer.cs">
       <DependentUpon>ManageSuppliers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Registration.cs">
+    <Compile Include="SystemUi\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Registration.Designer.cs">
+    <Compile Include="SystemUi\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\AdminDashboard.resx">
+    <EmbeddedResource Include="SystemUi\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LogIn.resx">
+    <EmbeddedResource Include="SystemUi\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManageProducts.resx">
+    <EmbeddedResource Include="SystemUi\ManageProducts.resx">
       <DependentUpon>ManageProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManageSuppliers.resx">
+    <EmbeddedResource Include="SystemUi\ManageSuppliers.resx">
       <DependentUpon>ManageSuppliers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Registration.resx">
+    <EmbeddedResource Include="SystemUi\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -169,5 +172,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

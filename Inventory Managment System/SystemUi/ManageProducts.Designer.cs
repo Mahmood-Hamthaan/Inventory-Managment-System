@@ -67,6 +67,7 @@
             this.buttonEdit.TabIndex = 33;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonClear
             // 
@@ -75,8 +76,9 @@
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(127, 36);
             this.buttonClear.TabIndex = 32;
-            this.buttonClear.Text = "Clear";
+            this.buttonClear.Text = "View";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonDelete
             // 
@@ -87,6 +89,7 @@
             this.buttonDelete.TabIndex = 31;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // comboBoxSupplier
             // 
@@ -134,6 +137,7 @@
             this.buttonAdd.TabIndex = 25;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // labelSupplier
             // 

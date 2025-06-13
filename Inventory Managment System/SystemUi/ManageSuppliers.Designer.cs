@@ -65,6 +65,7 @@
             this.buttonEditSupplier.TabIndex = 50;
             this.buttonEditSupplier.Text = "Edit";
             this.buttonEditSupplier.UseVisualStyleBackColor = true;
+            this.buttonEditSupplier.Click += new System.EventHandler(this.buttonEditSupplier_Click);
             // 
             // buttonClearSupplier
             // 

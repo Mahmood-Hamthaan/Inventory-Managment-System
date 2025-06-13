@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Inventory_Managment_System.Forms
 {
-    public partial class ManageProducts : Form
+    public partial class ManageSuppliers : Form
     {
-        public ManageProducts()
+        public ManageSuppliers()
         {
             InitializeComponent();
+        }
+
+        private void buttonEditSupplier_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
