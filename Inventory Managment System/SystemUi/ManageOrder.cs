@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Inventory_Managment_System.Models;
+using MySql.Data.MySqlClient;
+using Inventory_Managment_System.Classes;
 
 namespace Inventory_Managment_System.SystemUi
 {
@@ -23,6 +25,18 @@ namespace Inventory_Managment_System.SystemUi
         private void labelPurchaseOrder_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void AddOrder(int productId, int supplierId, int quantityOrdered)
+        {
+            string query = "INSERT INTO orders (ProductID, SupplierID, QuantityOrdered) VALUES (@ProductID, @SupplierID, @QuantityOrdered)";
+            var parameters = new Dictionary<string, object>
+            {
+                {"@ProductID", productId},
+                {"@SupplierID", supplierId},
+                {"@QuantityOrdered", quantityOrdered}
+            };
+            new DBconnection().ExecuteQuery(query, parameters);
         }
 
         private void buttonOrderUpdate_Click(object sender, EventArgs e)
@@ -76,26 +90,7 @@ namespace Inventory_Managment_System.SystemUi
             }
         }
 
-        private void buttonOrderCreate_Click(object sender, EventArgs e)
-        {
-            Supplier selectedSupplier = suppliers.FirstOrDefault(s => s.Name == cmbOrderSupplier.Text);
-            if (selectedSupplier == null)
-            {
-                MessageBox.Show("Please select a valid supplier.");
-                return;
-            }
 
-            Order order = new Order
-            {
-                OrderID = int.Parse(txtOrderID.Text),
-                Supplier = selectedSupplier,
-                TotalPrice = decimal.Parse(txtOrderTotalPrice.Text),
-                Status = txtOrderStatus.Text
-            };
-
-            orders.Add(order);
-            MessageBox.Show("Order added successfully!");
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -113,6 +108,11 @@ namespace Inventory_Managment_System.SystemUi
         }
 
         private void dgvOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void ManageOrder_Load(object sender, EventArgs e)
         {
 
         }

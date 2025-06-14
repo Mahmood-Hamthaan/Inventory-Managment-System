@@ -130,5 +130,10 @@ namespace Inventory_Managment_System.Forms
         {
 
         }
+
+        private void Name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

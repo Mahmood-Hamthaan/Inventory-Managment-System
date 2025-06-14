@@ -40,7 +40,7 @@
             this.labelStock = new System.Windows.Forms.Label();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.labelManageProducts = new System.Windows.Forms.Label();
             this.buttonView = new System.Windows.Forms.Button();
@@ -162,15 +162,16 @@
             this.labelDescription.TabIndex = 21;
             this.labelDescription.Text = "Description :";
             // 
-            // Name
+            // labelName
             // 
-            this.Name.AutoSize = true;
-            this.Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.Name.Location = new System.Drawing.Point(43, 263);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(63, 20);
-            this.Name.TabIndex = 20;
-            this.Name.Text = "Name :";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.labelName.Location = new System.Drawing.Point(43, 263);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(63, 20);
+            this.labelName.TabIndex = 20;
+            this.labelName.Text = "Name :";
+            this.labelName.Click += new System.EventHandler(this.Name_Click);
             // 
             // dataGridViewProducts
             // 
@@ -231,7 +232,7 @@
             this.Controls.Add(this.labelStock);
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelDescription);
-            this.Controls.Add(this.Name);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.dataGridViewProducts);
             this.Controls.Add(this.labelManageProducts);
             this.Name = "ManageProducts";
@@ -257,7 +258,7 @@
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelDescription;
-        private System.Windows.Forms.Label Name;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.DataGridView dataGridViewProducts;
         private System.Windows.Forms.Label labelManageProducts;
         private System.Windows.Forms.Button buttonView;
