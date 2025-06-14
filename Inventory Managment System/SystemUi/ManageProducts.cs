@@ -25,10 +25,10 @@ namespace Inventory_Managment_System.Forms
         {
             Product product = new Product
             {
-                Name = txtName.Text,
-                SKU = txtSKU.Text,
-                Quantity = int.Parse(txtQuantity.Text),
-                Price = decimal.Parse(txtPrice.Text)
+                Name = textName.Text,
+                SKU = textQuantity.Text,
+                Quantity = int.Parse(textQuantity.Text),
+                Price = decimal.Parse(textPrice.Text)
             };
 
             product.AddProduct();
@@ -37,14 +37,14 @@ namespace Inventory_Managment_System.Forms
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            string sku = txtSKU.Text;
+            string sku = textSKU.Text;
             Product product = products.FirstOrDefault(p => p.SKU == sku);
 
             if (product != null)
             {
-                product.Name = txtName.Text;
-                product.Quantity = int.Parse(txtQuantity.Text);
-                product.Price = decimal.Parse(txtPrice.Text);
+                product.Name = textName.Text;
+                product.Quantity = int.Parse(textQuantity.Text);
+                product.Price = decimal.Parse(textPrice.Text);
                 MessageBox.Show("Product updated successfully!");
             }
             else
@@ -55,7 +55,7 @@ namespace Inventory_Managment_System.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            string sku = txtSKU.Text;
+            string sku = textSKU.Text;
             Product product = products.FirstOrDefault(p => p.SKU == sku);
 
             if (product != null)
@@ -80,6 +80,11 @@ namespace Inventory_Managment_System.Forms
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textName_TextChanged(object sender, EventArgs e)
         {
 
         }

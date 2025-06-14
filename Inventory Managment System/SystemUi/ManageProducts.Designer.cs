@@ -32,10 +32,10 @@
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
-            this.textBoxStock = new System.Windows.Forms.TextBox();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textQuantity = new System.Windows.Forms.TextBox();
+            this.textPrice = new System.Windows.Forms.TextBox();
+            this.textSKU = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.labelSupplier = new System.Windows.Forms.Label();
             this.labelStock = new System.Windows.Forms.Label();
@@ -88,34 +88,35 @@
             this.comboBoxSupplier.Size = new System.Drawing.Size(260, 24);
             this.comboBoxSupplier.TabIndex = 30;
             // 
-            // textBoxStock
+            // textQuantity
             // 
-            this.textBoxStock.Location = new System.Drawing.Point(167, 360);
-            this.textBoxStock.Name = "textBoxStock";
-            this.textBoxStock.Size = new System.Drawing.Size(260, 22);
-            this.textBoxStock.TabIndex = 29;
+            this.textQuantity.Location = new System.Drawing.Point(167, 360);
+            this.textQuantity.Name = "textQuantity";
+            this.textQuantity.Size = new System.Drawing.Size(260, 22);
+            this.textQuantity.TabIndex = 29;
             // 
-            // textBoxPrice
+            // textPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(167, 327);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(260, 22);
-            this.textBoxPrice.TabIndex = 28;
+            this.textPrice.Location = new System.Drawing.Point(167, 327);
+            this.textPrice.Name = "textPrice";
+            this.textPrice.Size = new System.Drawing.Size(260, 22);
+            this.textPrice.TabIndex = 28;
             // 
-            // textBoxDescription
+            // textSKU
             // 
-            this.textBoxDescription.Location = new System.Drawing.Point(167, 294);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.Size = new System.Drawing.Size(260, 22);
-            this.textBoxDescription.TabIndex = 27;
+            this.textSKU.Location = new System.Drawing.Point(167, 294);
+            this.textSKU.Multiline = true;
+            this.textSKU.Name = "textSKU";
+            this.textSKU.Size = new System.Drawing.Size(260, 22);
+            this.textSKU.TabIndex = 27;
             // 
-            // textBoxName
+            // textName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(167, 261);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(260, 22);
-            this.textBoxName.TabIndex = 26;
+            this.textName.Location = new System.Drawing.Point(167, 261);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(260, 22);
+            this.textName.TabIndex = 26;
+            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // buttonAdd
             // 
@@ -219,10 +220,10 @@
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.comboBoxSupplier);
-            this.Controls.Add(this.textBoxStock);
-            this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxDescription);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textQuantity);
+            this.Controls.Add(this.textPrice);
+            this.Controls.Add(this.textSKU);
+            this.Controls.Add(this.textName);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelSupplier);
             this.Controls.Add(this.labelStock);
@@ -246,10 +247,10 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.ComboBox comboBoxSupplier;
-        private System.Windows.Forms.TextBox textBoxStock;
-        private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.TextBox textBoxDescription;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textQuantity;
+        private System.Windows.Forms.TextBox textPrice;
+        private System.Windows.Forms.TextBox textSKU;
+        private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label labelSupplier;
         private System.Windows.Forms.Label labelStock;
