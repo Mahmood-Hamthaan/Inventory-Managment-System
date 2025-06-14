@@ -1,6 +1,6 @@
 ﻿namespace Inventory_Managment_System.SystemUi
 {
-    partial class CustomerDashboard
+    partial class CustomerDashboardUI
     {
         /// <summary>
         /// Required designer variable.

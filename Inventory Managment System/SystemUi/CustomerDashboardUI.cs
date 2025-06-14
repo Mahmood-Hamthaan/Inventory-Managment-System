@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Managment_System.Forms
+namespace Inventory_Managment_System.SystemUi
 {
-    public partial class AdminDashboard : Form
+    public partial class CustomerDashboardUI: Form
     {
-        public AdminDashboard()
+        public CustomerDashboardUI()
         {
             InitializeComponent();
         }

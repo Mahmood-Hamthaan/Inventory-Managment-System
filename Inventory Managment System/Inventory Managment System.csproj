@@ -101,21 +101,22 @@
   <ItemGroup>
     <Compile Include="Classes\DBconnection.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\CustomerDashboard.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Supplier.cs" />
-    <Compile Include="SystemUi\AdminDashboard.cs">
+    <Compile Include="SystemUi\AdminDashboardUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemUi\AdminDashboard.Designer.cs">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <Compile Include="SystemUi\AdminDashboardUI.Designer.cs">
+      <DependentUpon>AdminDashboardUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemUi\CustomerDashboard.cs">
+    <Compile Include="SystemUi\CustomerDashboardUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemUi\CustomerDashboard.Designer.cs">
-      <DependentUpon>CustomerDashboard.cs</DependentUpon>
+    <Compile Include="SystemUi\CustomerDashboardUI.Designer.cs">
+      <DependentUpon>CustomerDashboardUI.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemUi\LogIn.cs">
       <SubType>Form</SubType>
@@ -155,14 +156,14 @@
     <Compile Include="SystemUi\StockMovementcs.Designer.cs">
       <DependentUpon>StockMovementcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemUi\SupplierDashboard.cs">
+    <Compile Include="SystemUi\SupplierDashboardUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemUi\SupplierDashboard.Designer.cs">
-      <DependentUpon>SupplierDashboard.cs</DependentUpon>
+    <Compile Include="SystemUi\SupplierDashboardUI.Designer.cs">
+      <DependentUpon>SupplierDashboardUI.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SystemUi\AdminDashboard.resx">
-      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="SystemUi\AdminDashboardUI.resx">
+      <DependentUpon>AdminDashboardUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemUi\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>

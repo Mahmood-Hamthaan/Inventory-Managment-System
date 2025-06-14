@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Inventory_Managment_System.SystemUi
 {
-    public partial class SupplierDashboard: Form
+    public partial class SupplierDashboardUI: Form
     {
-        public SupplierDashboard()
+        public SupplierDashboardUI()
         {
             InitializeComponent();
         }
