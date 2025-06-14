@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data;
+
 
 namespace Inventory_Managment_System.Classes
 {
@@ -16,8 +18,15 @@ namespace Inventory_Managment_System.Classes
 
         public DBconnection()
         {
-            string connectionString = "server=localhost;database=inventorymanagementsystem;user=root;password=;";
-            connection = new MySqlConnection(connectionString);
+            try
+            {
+                connectionString = "server=localhost;database=inventory_management;user=root;password=;";
+                connection = new MySqlConnection(connectionString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Initialization Error: " + ex.Message, "Database Connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public bool OpenConnection()
@@ -48,13 +57,20 @@ namespace Inventory_Managment_System.Classes
             }
         }
 
-        public void ExecuteQuery(string query)
+        public void ExecuteQuery(string query, Dictionary<string, object> parameters = null)
         {
             if (OpenConnection())
             {
                 try
                 {
                     MySqlCommand command = new MySqlCommand(query, connection);
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                        {
+                            command.Parameters.AddWithValue(param.Key, param.Value);
+                        }
+                    }
                     command.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -66,6 +82,36 @@ namespace Inventory_Managment_System.Classes
                     CloseConnection();
                 }
             }
+        }
+
+        public DataTable GetData(string query, Dictionary<string, object> parameters = null)
+        {
+            DataTable table = new DataTable();
+            if (OpenConnection())
+            {
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                        {
+                            command.Parameters.AddWithValue(param.Key, param.Value);
+                        }
+                    }
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                    adapter.Fill(table);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Data Retrieval Error: " + ex.Message, "Query Execution", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    CloseConnection();
+                }
+            }
+            return table;
         }
 
         public int GetLastInsertId()

@@ -85,6 +85,7 @@
             this.dgvOrders.RowTemplate.Height = 24;
             this.dgvOrders.Size = new System.Drawing.Size(521, 150);
             this.dgvOrders.TabIndex = 22;
+            this.dgvOrders.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOrders_CellContentClick);
             // 
             // labelPurchaseOrder
             // 

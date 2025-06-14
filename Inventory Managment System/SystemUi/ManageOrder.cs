@@ -111,5 +111,10 @@ namespace Inventory_Managment_System.SystemUi
         {
 
         }
+
+        private void dgvOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

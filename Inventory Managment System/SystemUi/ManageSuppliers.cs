@@ -13,72 +13,105 @@ namespace Inventory_Managment_System.Forms
 {
     public partial class ManageSuppliers : Form
     {
-        private List<Supplier> suppliers = new List<Supplier>();
-
         public ManageSuppliers()
         {
             InitializeComponent();
         }
 
+        // Add Supplier
+        private void buttonAddSupplier_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Supplier supplier = new Supplier();
+                supplier.AddSupplier(
+                    txtSupplierName.Text,
+                    txtContactInfo.Text,
+                    txtSupplierEmail.Text
+                );
+                MessageBox.Show("Supplier added successfully!");
+                RefreshSupplierGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding supplier: {ex.Message}");
+            }
+        }
+
+        // Edit Supplier
         private void buttonEditSupplier_Click(object sender, EventArgs e)
         {
-            string supplierName = txtSupplierName.Text;
-            Supplier supplier = suppliers.FirstOrDefault(s => s.Name == supplierName);
-
-            if (supplier != null)
+            try
             {
-                supplier.ContactInfo = txtContactInfo.Text;
+                string supplierName = txtSupplierName.Text;
+                Supplier supplier = new Supplier();
+                supplier.UpdateSupplier(
+                    supplierName,
+                    txtContactInfo.Text,
+                    txtSupplierEmail.Text
+                );
                 MessageBox.Show("Supplier updated successfully!");
                 RefreshSupplierGrid();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Supplier not found.");
+                MessageBox.Show($"Error updating supplier: {ex.Message}");
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonAddSupplier_Click(object sender, EventArgs e)
-        {
-            Supplier supplier = new Supplier
-            {
-                Name = txtSupplierName.Text,
-                ContactInfo = txtContactInfo.Text
-            };
-
-            suppliers.Add(supplier);
-            MessageBox.Show("Supplier added successfully!");
-        }
-
+        // Delete Supplier
         private void buttonDeleteSupplier_Click(object sender, EventArgs e)
         {
-            string supplierName = txtSupplierName.Text;
-            Supplier supplier = suppliers.FirstOrDefault(s => s.Name == supplierName);
-
-            if (supplier != null)
+            try
             {
-                suppliers.Remove(supplier);
+                string supplierName = txtSupplierName.Text;
+                Supplier supplier = new Supplier();
+                supplier.DeleteSupplier(supplierName);
                 MessageBox.Show("Supplier deleted successfully!");
                 RefreshSupplierGrid();
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Supplier not found.");
+                MessageBox.Show($"Error deleting supplier: {ex.Message}");
             }
         }
 
+        // Refresh Supplier Grid
+        private void RefreshSupplierGrid()
+        {
+            try
+            {
+                Supplier supplier = new Supplier();
+                DataTable supplierData = supplier.GetAllSuppliers();
+                dataGridViewSuppliers.DataSource = supplierData;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading suppliers: {ex.Message}");
+            }
+        }
+
+        // Form Load Event
+        private void ManageSuppliers_Load(object sender, EventArgs e)
+        {
+            RefreshSupplierGrid();
+        }
+
+        // Other Event Placeholders
         private void textBoxSupplierPhone_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void textBoxSupplierEmail_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void dataGridViewSuppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

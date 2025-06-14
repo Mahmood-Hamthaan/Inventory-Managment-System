@@ -36,9 +36,9 @@
             this.lebeleSupplierName = new System.Windows.Forms.Label();
             this.labelManageSuppliers = new System.Windows.Forms.Label();
             this.dataGridViewSuppliers = new System.Windows.Forms.DataGridView();
-            this.textBoxSupplierPhone = new System.Windows.Forms.TextBox();
+            this.txtContactInfo = new System.Windows.Forms.TextBox();
             this.labelSupplierPhone = new System.Windows.Forms.Label();
-            this.textBoxSupplierEmail = new System.Windows.Forms.TextBox();
+            this.txtSupplierEmail = new System.Windows.Forms.TextBox();
             this.labelSupplierEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSuppliers)).BeginInit();
@@ -123,14 +123,15 @@
             this.dataGridViewSuppliers.RowTemplate.Height = 24;
             this.dataGridViewSuppliers.Size = new System.Drawing.Size(575, 150);
             this.dataGridViewSuppliers.TabIndex = 52;
+            this.dataGridViewSuppliers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSuppliers_CellContentClick);
             // 
-            // textBoxSupplierPhone
+            // txtContactInfo
             // 
-            this.textBoxSupplierPhone.Location = new System.Drawing.Point(167, 114);
-            this.textBoxSupplierPhone.Name = "textBoxSupplierPhone";
-            this.textBoxSupplierPhone.Size = new System.Drawing.Size(260, 22);
-            this.textBoxSupplierPhone.TabIndex = 54;
-            this.textBoxSupplierPhone.TextChanged += new System.EventHandler(this.textBoxSupplierPhone_TextChanged);
+            this.txtContactInfo.Location = new System.Drawing.Point(167, 114);
+            this.txtContactInfo.Name = "txtContactInfo";
+            this.txtContactInfo.Size = new System.Drawing.Size(260, 22);
+            this.txtContactInfo.TabIndex = 54;
+            this.txtContactInfo.TextChanged += new System.EventHandler(this.textBoxSupplierPhone_TextChanged);
             // 
             // labelSupplierPhone
             // 
@@ -142,13 +143,13 @@
             this.labelSupplierPhone.TabIndex = 53;
             this.labelSupplierPhone.Text = "Phone :";
             // 
-            // textBoxSupplierEmail
+            // txtSupplierEmail
             // 
-            this.textBoxSupplierEmail.Location = new System.Drawing.Point(167, 154);
-            this.textBoxSupplierEmail.Name = "textBoxSupplierEmail";
-            this.textBoxSupplierEmail.Size = new System.Drawing.Size(260, 22);
-            this.textBoxSupplierEmail.TabIndex = 56;
-            this.textBoxSupplierEmail.TextChanged += new System.EventHandler(this.textBoxSupplierEmail_TextChanged);
+            this.txtSupplierEmail.Location = new System.Drawing.Point(167, 154);
+            this.txtSupplierEmail.Name = "txtSupplierEmail";
+            this.txtSupplierEmail.Size = new System.Drawing.Size(260, 22);
+            this.txtSupplierEmail.TabIndex = 56;
+            this.txtSupplierEmail.TextChanged += new System.EventHandler(this.textBoxSupplierEmail_TextChanged);
             // 
             // labelSupplierEmail
             // 
@@ -177,9 +178,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 517);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxSupplierEmail);
+            this.Controls.Add(this.txtSupplierEmail);
             this.Controls.Add(this.labelSupplierEmail);
-            this.Controls.Add(this.textBoxSupplierPhone);
+            this.Controls.Add(this.txtContactInfo);
             this.Controls.Add(this.labelSupplierPhone);
             this.Controls.Add(this.dataGridViewSuppliers);
             this.Controls.Add(this.buttonDashboard);
@@ -207,9 +208,9 @@
         private System.Windows.Forms.Label lebeleSupplierName;
         private System.Windows.Forms.Label labelManageSuppliers;
         private System.Windows.Forms.DataGridView dataGridViewSuppliers;
-        private System.Windows.Forms.TextBox textBoxSupplierPhone;
+        private System.Windows.Forms.TextBox txtContactInfo;
         private System.Windows.Forms.Label labelSupplierPhone;
-        private System.Windows.Forms.TextBox textBoxSupplierEmail;
+        private System.Windows.Forms.TextBox txtSupplierEmail;
         private System.Windows.Forms.Label labelSupplierEmail;
         private System.Windows.Forms.Label label1;
     }

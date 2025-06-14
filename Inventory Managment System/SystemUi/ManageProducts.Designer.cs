@@ -31,7 +31,6 @@
             this.buttonDashboard = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.comboBoxSupplier = new System.Windows.Forms.ComboBox();
             this.textQuantity = new System.Windows.Forms.TextBox();
             this.textPrice = new System.Windows.Forms.TextBox();
             this.textSKU = new System.Windows.Forms.TextBox();
@@ -45,6 +44,7 @@
             this.dataGridViewProducts = new System.Windows.Forms.DataGridView();
             this.labelManageProducts = new System.Windows.Forms.Label();
             this.buttonView = new System.Windows.Forms.Button();
+            this.textProductID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,14 +80,6 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // comboBoxSupplier
-            // 
-            this.comboBoxSupplier.FormattingEnabled = true;
-            this.comboBoxSupplier.Location = new System.Drawing.Point(167, 393);
-            this.comboBoxSupplier.Name = "comboBoxSupplier";
-            this.comboBoxSupplier.Size = new System.Drawing.Size(260, 24);
-            this.comboBoxSupplier.TabIndex = 30;
-            // 
             // textQuantity
             // 
             this.textQuantity.Location = new System.Drawing.Point(167, 360);
@@ -104,7 +96,7 @@
             // 
             // textSKU
             // 
-            this.textSKU.Location = new System.Drawing.Point(167, 294);
+            this.textSKU.Location = new System.Drawing.Point(167, 393);
             this.textSKU.Multiline = true;
             this.textSKU.Name = "textSKU";
             this.textSKU.Size = new System.Drawing.Size(260, 22);
@@ -133,11 +125,12 @@
             // 
             this.labelSupplier.AutoSize = true;
             this.labelSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.labelSupplier.Location = new System.Drawing.Point(43, 393);
+            this.labelSupplier.Location = new System.Drawing.Point(43, 297);
             this.labelSupplier.Name = "labelSupplier";
-            this.labelSupplier.Size = new System.Drawing.Size(80, 20);
+            this.labelSupplier.Size = new System.Drawing.Size(99, 20);
             this.labelSupplier.TabIndex = 24;
-            this.labelSupplier.Text = "Supplier :";
+            this.labelSupplier.Text = "Product ID :";
+            this.labelSupplier.Click += new System.EventHandler(this.labelSupplier_Click);
             // 
             // labelStock
             // 
@@ -163,7 +156,7 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.labelDescription.Location = new System.Drawing.Point(43, 296);
+            this.labelDescription.Location = new System.Drawing.Point(43, 393);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(105, 20);
             this.labelDescription.TabIndex = 21;
@@ -188,6 +181,7 @@
             this.dataGridViewProducts.RowTemplate.Height = 24;
             this.dataGridViewProducts.Size = new System.Drawing.Size(575, 150);
             this.dataGridViewProducts.TabIndex = 19;
+            this.dataGridViewProducts.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProducts_CellContentClick);
             // 
             // labelManageProducts
             // 
@@ -210,16 +204,24 @@
             this.buttonView.UseVisualStyleBackColor = true;
             this.buttonView.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textProductID
+            // 
+            this.textProductID.Location = new System.Drawing.Point(167, 294);
+            this.textProductID.Multiline = true;
+            this.textProductID.Name = "textProductID";
+            this.textProductID.Size = new System.Drawing.Size(260, 22);
+            this.textProductID.TabIndex = 36;
+            // 
             // ManageProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(663, 524);
+            this.Controls.Add(this.textProductID);
             this.Controls.Add(this.buttonView);
             this.Controls.Add(this.buttonDashboard);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.comboBoxSupplier);
             this.Controls.Add(this.textQuantity);
             this.Controls.Add(this.textPrice);
             this.Controls.Add(this.textSKU);
@@ -246,7 +248,6 @@
         private System.Windows.Forms.Button buttonDashboard;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.ComboBox comboBoxSupplier;
         private System.Windows.Forms.TextBox textQuantity;
         private System.Windows.Forms.TextBox textPrice;
         private System.Windows.Forms.TextBox textSKU;
@@ -260,5 +261,6 @@
         private System.Windows.Forms.DataGridView dataGridViewProducts;
         private System.Windows.Forms.Label labelManageProducts;
         private System.Windows.Forms.Button buttonView;
+        private System.Windows.Forms.TextBox textProductID;
     }
 }
