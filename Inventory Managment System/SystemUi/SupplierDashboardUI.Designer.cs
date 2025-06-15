@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.labelSupplierDashboard = new System.Windows.Forms.Label();
-            this.buttonSupplierStockMovement = new System.Windows.Forms.Button();
-            this.buttonSupplerManageProdect = new System.Windows.Forms.Button();
-            this.buttonSupplerLogout = new System.Windows.Forms.Button();
+            this.BtnStockMovement = new System.Windows.Forms.Button();
+            this.BtnManageProducts = new System.Windows.Forms.Button();
+            this.BtnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelSupplierDashboard
@@ -44,44 +44,47 @@
             this.labelSupplierDashboard.TabIndex = 1;
             this.labelSupplierDashboard.Text = "Supplier Dashboard";
             // 
-            // buttonSupplierStockMovement
+            // BtnStockMovement
             // 
-            this.buttonSupplierStockMovement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSupplierStockMovement.Location = new System.Drawing.Point(374, 142);
-            this.buttonSupplierStockMovement.Name = "buttonSupplierStockMovement";
-            this.buttonSupplierStockMovement.Size = new System.Drawing.Size(188, 33);
-            this.buttonSupplierStockMovement.TabIndex = 3;
-            this.buttonSupplierStockMovement.Text = "StockMovement";
-            this.buttonSupplierStockMovement.UseVisualStyleBackColor = true;
+            this.BtnStockMovement.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStockMovement.Location = new System.Drawing.Point(374, 142);
+            this.BtnStockMovement.Name = "BtnStockMovement";
+            this.BtnStockMovement.Size = new System.Drawing.Size(188, 33);
+            this.BtnStockMovement.TabIndex = 3;
+            this.BtnStockMovement.Text = "StockMovement";
+            this.BtnStockMovement.UseVisualStyleBackColor = true;
+            this.BtnStockMovement.Click += new System.EventHandler(this.BtnStockMovement_Click);
             // 
-            // buttonSupplerManageProdect
+            // BtnManageProducts
             // 
-            this.buttonSupplerManageProdect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSupplerManageProdect.Location = new System.Drawing.Point(109, 142);
-            this.buttonSupplerManageProdect.Name = "buttonSupplerManageProdect";
-            this.buttonSupplerManageProdect.Size = new System.Drawing.Size(188, 33);
-            this.buttonSupplerManageProdect.TabIndex = 4;
-            this.buttonSupplerManageProdect.Text = "Manage Products";
-            this.buttonSupplerManageProdect.UseVisualStyleBackColor = true;
+            this.BtnManageProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnManageProducts.Location = new System.Drawing.Point(109, 142);
+            this.BtnManageProducts.Name = "BtnManageProducts";
+            this.BtnManageProducts.Size = new System.Drawing.Size(188, 33);
+            this.BtnManageProducts.TabIndex = 4;
+            this.BtnManageProducts.Text = "Manage Products";
+            this.BtnManageProducts.UseVisualStyleBackColor = true;
+            this.BtnManageProducts.Click += new System.EventHandler(this.buttonSupplerManageProdect_Click);
             // 
-            // buttonSupplerLogout
+            // BtnLogout
             // 
-            this.buttonSupplerLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonSupplerLogout.Location = new System.Drawing.Point(281, 233);
-            this.buttonSupplerLogout.Name = "buttonSupplerLogout";
-            this.buttonSupplerLogout.Size = new System.Drawing.Size(85, 36);
-            this.buttonSupplerLogout.TabIndex = 5;
-            this.buttonSupplerLogout.Text = "Logout";
-            this.buttonSupplerLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.BtnLogout.Location = new System.Drawing.Point(281, 233);
+            this.BtnLogout.Name = "BtnLogout";
+            this.BtnLogout.Size = new System.Drawing.Size(85, 36);
+            this.BtnLogout.TabIndex = 5;
+            this.BtnLogout.Text = "Logout";
+            this.BtnLogout.UseVisualStyleBackColor = true;
+            this.BtnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
             // SupplierDashboardUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 327);
-            this.Controls.Add(this.buttonSupplerLogout);
-            this.Controls.Add(this.buttonSupplerManageProdect);
-            this.Controls.Add(this.buttonSupplierStockMovement);
+            this.Controls.Add(this.BtnLogout);
+            this.Controls.Add(this.BtnManageProducts);
+            this.Controls.Add(this.BtnStockMovement);
             this.Controls.Add(this.labelSupplierDashboard);
             this.Name = "SupplierDashboardUI";
             this.Text = "SupplierDashboard";
@@ -93,8 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Label labelSupplierDashboard;
-        private System.Windows.Forms.Button buttonSupplierStockMovement;
-        private System.Windows.Forms.Button buttonSupplerManageProdect;
-        private System.Windows.Forms.Button buttonSupplerLogout;
+        private System.Windows.Forms.Button BtnStockMovement;
+        private System.Windows.Forms.Button BtnManageProducts;
+        private System.Windows.Forms.Button BtnLogout;
     }
 }
