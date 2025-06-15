@@ -29,85 +29,90 @@
         private void InitializeComponent()
         {
             this.labelAdminDashboard = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnManageProducts = new System.Windows.Forms.Button();
+            this.btnManageSupplier = new System.Windows.Forms.Button();
+            this.btnManageOrders = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnRegisterUsers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelAdminDashboard
             // 
             this.labelAdminDashboard.AutoSize = true;
             this.labelAdminDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.labelAdminDashboard.Location = new System.Drawing.Point(214, 44);
+            this.labelAdminDashboard.Location = new System.Drawing.Point(369, 44);
             this.labelAdminDashboard.Name = "labelAdminDashboard";
             this.labelAdminDashboard.Size = new System.Drawing.Size(220, 29);
             this.labelAdminDashboard.TabIndex = 0;
             this.labelAdminDashboard.Text = "Admin Dashboard";
             // 
-            // button1
+            // btnManageProducts
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 33);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Manage Products";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnManageProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageProducts.Location = new System.Drawing.Point(132, 139);
+            this.btnManageProducts.Name = "btnManageProducts";
+            this.btnManageProducts.Size = new System.Drawing.Size(228, 33);
+            this.btnManageProducts.TabIndex = 1;
+            this.btnManageProducts.Text = "Manage Products";
+            this.btnManageProducts.UseVisualStyleBackColor = true;
+            this.btnManageProducts.Click += new System.EventHandler(this.btnManageProducts_Click);
             // 
-            // button2
+            // btnManageSupplier
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(230, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 33);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Manage Suppliers";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnManageSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnManageSupplier.Location = new System.Drawing.Point(342, 76);
+            this.btnManageSupplier.Name = "btnManageSupplier";
+            this.btnManageSupplier.Size = new System.Drawing.Size(266, 33);
+            this.btnManageSupplier.TabIndex = 2;
+            this.btnManageSupplier.Text = "Manage Suppliers";
+            this.btnManageSupplier.UseVisualStyleBackColor = true;
+            this.btnManageSupplier.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnManageOrders
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(461, 139);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 33);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Manage Orders";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnManageOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnManageOrders.Location = new System.Drawing.Point(589, 139);
+            this.btnManageOrders.Name = "btnManageOrders";
+            this.btnManageOrders.Size = new System.Drawing.Size(224, 33);
+            this.btnManageOrders.TabIndex = 3;
+            this.btnManageOrders.Text = "Manage Orders";
+            this.btnManageOrders.UseVisualStyleBackColor = true;
+            this.btnManageOrders.Click += new System.EventHandler(this.btnManageOrders_Click);
             // 
-            // button4
+            // btnLogout
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.button4.Location = new System.Drawing.Point(269, 241);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 36);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Logout";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.btnLogout.Location = new System.Drawing.Point(426, 241);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(85, 36);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button5
+            // btnRegisterUsers
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button5.Location = new System.Drawing.Point(230, 184);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(188, 33);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Register Users";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnRegisterUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnRegisterUsers.Location = new System.Drawing.Point(342, 187);
+            this.btnRegisterUsers.Name = "btnRegisterUsers";
+            this.btnRegisterUsers.Size = new System.Drawing.Size(266, 33);
+            this.btnRegisterUsers.TabIndex = 5;
+            this.btnRegisterUsers.Text = "Register Users";
+            this.btnRegisterUsers.UseVisualStyleBackColor = true;
+            this.btnRegisterUsers.Click += new System.EventHandler(this.btnRegisterUsers_Click);
             // 
-            // AdminDashboard
+            // AdminDashboardUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 289);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(947, 289);
+            this.Controls.Add(this.btnRegisterUsers);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnManageOrders);
+            this.Controls.Add(this.btnManageSupplier);
+            this.Controls.Add(this.btnManageProducts);
             this.Controls.Add(this.labelAdminDashboard);
-            this.Name = "AdminDashboard";
+            this.Name = "AdminDashboardUI";
             this.Text = " Admin Dashboard";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,10 +122,10 @@
         #endregion
 
         private System.Windows.Forms.Label labelAdminDashboard;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnManageProducts;
+        private System.Windows.Forms.Button btnManageSupplier;
+        private System.Windows.Forms.Button btnManageOrders;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnRegisterUsers;
     }
 }

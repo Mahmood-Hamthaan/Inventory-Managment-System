@@ -1,6 +1,6 @@
 ﻿namespace Inventory_Managment_System.SystemUi
 {
-    partial class StockMovementcs
+    partial class StockMovementUI
     {
         /// <summary>
         /// Required designer variable.

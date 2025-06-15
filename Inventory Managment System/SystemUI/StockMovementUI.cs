@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Managment_System.Forms
+namespace Inventory_Managment_System.SystemUi
 {
-    public partial class Registration : Form
+    public partial class StockMovementUI : Form
     {
-        public Registration()
+        public StockMovementUI()
         {
             InitializeComponent();
         }

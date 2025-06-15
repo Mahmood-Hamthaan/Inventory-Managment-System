@@ -106,6 +106,10 @@
             // cmbRole
             // 
             this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Items.AddRange(new object[] {
+            "Admin",
+            "Supplier",
+            "Customer"});
             this.cmbRole.Location = new System.Drawing.Point(634, 230);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(269, 24);

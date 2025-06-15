@@ -142,19 +142,19 @@
     <Compile Include="SystemUI\ManageSuppliers.Designer.cs">
       <DependentUpon>ManageSuppliers.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemUI\Registration.cs">
+    <Compile Include="SystemUI\RegistrationUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemUI\Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <Compile Include="SystemUI\RegistrationUI.Designer.cs">
+      <DependentUpon>RegistrationUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SystemUI\StockMovementcs.cs">
+    <Compile Include="SystemUI\StockMovementUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemUI\StockMovementcs.Designer.cs">
-      <DependentUpon>StockMovementcs.cs</DependentUpon>
+    <Compile Include="SystemUI\StockMovementUI.Designer.cs">
+      <DependentUpon>StockMovementUI.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemUI\SupplierDashboardUI.cs">
       <SubType>Form</SubType>
@@ -177,8 +177,8 @@
     <EmbeddedResource Include="SystemUI\ManageSuppliers.resx">
       <DependentUpon>ManageSuppliers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SystemUI\Registration.resx">
-      <DependentUpon>Registration.cs</DependentUpon>
+    <EmbeddedResource Include="SystemUI\RegistrationUI.resx">
+      <DependentUpon>RegistrationUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,8 +189,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SystemUI\StockMovementcs.resx">
-      <DependentUpon>StockMovementcs.cs</DependentUpon>
+    <EmbeddedResource Include="SystemUI\StockMovementUI.resx">
+      <DependentUpon>StockMovementUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemUI\SupplierDashboardUI.resx">
       <DependentUpon>SupplierDashboardUI.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Inventory_Managment_System.Forms
 {
-    partial class Registration
+    partial class RegistrationUI
     {
         /// <summary>
         /// Required designer variable.

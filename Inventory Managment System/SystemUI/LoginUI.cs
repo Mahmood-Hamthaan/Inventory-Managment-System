@@ -48,15 +48,21 @@ namespace Inventory_Managment_System.SystemUI
 
             if (role == "Admin")
             {
-                dashboard = new AdminDashboardUI();
+                AdminDashboardUI adminDashboard = new AdminDashboardUI();
+                adminDashboard.Show();
+                this.Hide();
             }
             else if (role == "Supplier")
             {
-                dashboard = new SupplierDashboardUI();
+                SupplierDashboardUI supplierDashboard = new SupplierDashboardUI();
+                supplierDashboard.Show();
+                this.Hide();
             }
             else if (role == "Customer")
             {
-                dashboard = new CustomerDashboardUI();
+                CustomerDashboardUI customerDashboard = new CustomerDashboardUI();
+                customerDashboard.Show();
+                this.Hide();
             }
 
             if (dashboard != null)
