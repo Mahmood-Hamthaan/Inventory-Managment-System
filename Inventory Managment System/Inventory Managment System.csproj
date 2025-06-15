@@ -199,6 +199,7 @@
     <EmbeddedResource Include="SystemUI\SupplierDashboardUI.resx">
       <DependentUpon>SupplierDashboardUI.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Diagrms\IMS Use Case Diagram.drawio" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
