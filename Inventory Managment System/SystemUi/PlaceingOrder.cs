@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inventory_Managment_System.SystemUi
+namespace Inventory_Managment_System.SystemUI
 {
-    public partial class CustomerDashboardUI: Form
+    public partial class PlaceingOrder : Form
     {
-        public CustomerDashboardUI()
+        public PlaceingOrder()
         {
             InitializeComponent();
         }
