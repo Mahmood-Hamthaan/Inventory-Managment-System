@@ -105,6 +105,7 @@
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="SystemUI\AdminDashboardUI.cs">
       <SubType>Form</SubType>
@@ -136,11 +137,11 @@
     <Compile Include="SystemUI\ManageSuppliers.Designer.cs">
       <DependentUpon>ManageSuppliers.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystemUI\PlaceingOrder.cs">
+    <Compile Include="SystemUI\PlaceOrderUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SystemUI\PlaceingOrder.Designer.cs">
-      <DependentUpon>PlaceingOrder.cs</DependentUpon>
+    <Compile Include="SystemUI\PlaceOrderUI.Designer.cs">
+      <DependentUpon>PlaceOrderUI.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemUI\RegistrationUI.cs">
       <SubType>Form</SubType>
@@ -177,8 +178,8 @@
     <EmbeddedResource Include="SystemUI\ManageSuppliers.resx">
       <DependentUpon>ManageSuppliers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SystemUI\PlaceingOrder.resx">
-      <DependentUpon>PlaceingOrder.cs</DependentUpon>
+    <EmbeddedResource Include="SystemUI\PlaceOrderUI.resx">
+      <DependentUpon>PlaceOrderUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystemUI\RegistrationUI.resx">
       <DependentUpon>RegistrationUI.cs</DependentUpon>

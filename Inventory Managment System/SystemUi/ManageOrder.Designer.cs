@@ -48,7 +48,7 @@
             // buttonDeleteOrder
             // 
             this.buttonDeleteOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.buttonDeleteOrder.Location = new System.Drawing.Point(426, 102);
+            this.buttonDeleteOrder.Location = new System.Drawing.Point(467, 102);
             this.buttonDeleteOrder.Name = "buttonDeleteOrder";
             this.buttonDeleteOrder.Size = new System.Drawing.Size(127, 36);
             this.buttonDeleteOrder.TabIndex = 35;
@@ -72,8 +72,9 @@
             this.dataGridViewManageOrder.Name = "dataGridViewManageOrder";
             this.dataGridViewManageOrder.RowHeadersWidth = 51;
             this.dataGridViewManageOrder.RowTemplate.Height = 24;
-            this.dataGridViewManageOrder.Size = new System.Drawing.Size(411, 150);
+            this.dataGridViewManageOrder.Size = new System.Drawing.Size(480, 150);
             this.dataGridViewManageOrder.TabIndex = 37;
+            this.dataGridViewManageOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewManageOrder_CellContentClick);
             // 
             // ManageOrder
             // 

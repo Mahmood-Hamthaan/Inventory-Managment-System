@@ -13,28 +13,34 @@ using Inventory_Managment_System;
 
 namespace Inventory_Managment_System.SystemUI
 {
-    public partial class LoginUI: Form
+    public partial class LoginUI : Form
     {
         private Login loginLogic;
 
         public LoginUI()
         {
             InitializeComponent();
-            loginLogic = new Login();   
+            loginLogic = new Login();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
-            string selectedRole = cmbRole.SelectedItem.ToString();
+            string selectedRole = cmbRole.SelectedItem?.ToString();
+
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password) || string.IsNullOrEmpty(selectedRole))
+            {
+                MessageBox.Show("Please fill in all fields and select a role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var result = loginLogic.Authenticate(username, password, selectedRole);
 
             if (result.IsValid)
             {
                 MessageBox.Show(result.Message, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                RedirectToDashboard(selectedRole);
+                RedirectToDashboard(selectedRole, username);
             }
             else
             {
@@ -42,10 +48,8 @@ namespace Inventory_Managment_System.SystemUI
             }
         }
 
-        private void RedirectToDashboard(string role)
+        private void RedirectToDashboard(string role, string username)
         {
-            Form dashboard = null;
-
             if (role == "Admin")
             {
                 AdminDashboardUI adminDashboard = new AdminDashboardUI();
@@ -60,22 +64,22 @@ namespace Inventory_Managment_System.SystemUI
             }
             else if (role == "Customer")
             {
-                CustomerDashboardUI customerDashboard = new CustomerDashboardUI();
-                customerDashboard.Show();
+                PlaceOrderUI placeOrderForm = new PlaceOrderUI
+                {
+                    LoggedInCustomerName = username
+                };
+                placeOrderForm.Show();
                 this.Hide();
             }
-
-            if (dashboard != null)
+            else
             {
-                this.Hide();
-                dashboard.ShowDialog();
-                this.Show();
+                MessageBox.Show("Invalid role selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            // Placeholder for handling text change if needed
         }
     }
 }
